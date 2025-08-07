@@ -2,8 +2,10 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const admin = require('firebase-admin');
+const cors = require('cors'); // <-- ADD THIS LINE
 
 const app = express();
+app.use(cors()); // <-- AND ADD THIS LINE
 app.use(bodyParser.json());
 
 // --- 2. INITIALIZE FIREBASE ---
